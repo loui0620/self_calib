@@ -1,0 +1,50 @@
+Calibrated BA report:
+
+Solver Summary (v 2.0.0-eigen-(3.3.4)-lapack-suitesparse-(5.4.0)-cxsparse-(3.1.9)-eigensparse-no_openmp)
+
+                                     Original                  Reduced
+Parameter blocks                         1068                     1068
+Parameters                               2155                     2155
+Effective parameters                     2154                     2154
+Residual blocks                          6494                     6494
+Residuals                               12988                    12988
+
+Minimizer                        TRUST_REGION
+
+Sparse linear algebra library    SUITE_SPARSE
+Trust region strategy     LEVENBERG_MARQUARDT
+
+                                        Given                     Used
+Linear solver                    SPARSE_SCHUR             SPARSE_SCHUR
+Threads                                     4                        4
+Linear solver ordering                1045,23                  1045,23
+Schur structure                         2,2,d                    2,2,d
+
+Cost:
+Initial                          8.724071e+04
+Final                            1.542792e+03
+Change                           8.569791e+04
+
+Minimizer iterations                       29
+Successful steps                           26
+Unsuccessful steps                          3
+
+Time (in seconds):
+Preprocessor                         0.004965
+
+  Residual only evaluation           0.154486 (29)
+  Jacobian & residual evaluation     4.079702 (26)
+  Linear solver                      0.189471 (29)
+Minimizer                            4.449545
+
+Postprocessor                        0.000162
+Total                                4.454672
+
+Termination:                      CONVERGENCE (Function tolerance reached. |cost_change|/cost: 2.826362e-07 <= 1.000000e-06)
+PP fixed: 0
+Distortion fixed: 0
+Focal fixed: 0
+3D Points fixed: 0
+Calibrated BA PP:  696.22 331.598
+Calibrated BA distortion: -4.2923e-08
+Calibrated BA focal: 1235.64 1245.98
