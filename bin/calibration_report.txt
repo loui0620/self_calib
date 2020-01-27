@@ -30,15 +30,15 @@ Successful steps                           26
 Unsuccessful steps                          3
 
 Time (in seconds):
-Preprocessor                         0.004965
+Preprocessor                         0.004663
 
-  Residual only evaluation           0.154486 (29)
-  Jacobian & residual evaluation     4.079702 (26)
-  Linear solver                      0.189471 (29)
-Minimizer                            4.449545
+  Residual only evaluation           0.155142 (29)
+  Jacobian & residual evaluation     4.189090 (26)
+  Linear solver                      0.191062 (29)
+Minimizer                            4.562750
 
-Postprocessor                        0.000162
-Total                                4.454672
+Postprocessor                        0.000157
+Total                                4.567570
 
 Termination:                      CONVERGENCE (Function tolerance reached. |cost_change|/cost: 2.826362e-07 <= 1.000000e-06)
 PP fixed: 0

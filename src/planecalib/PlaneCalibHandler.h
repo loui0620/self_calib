@@ -23,7 +23,6 @@ class PlaneCalibSystem;
 class ImageDataSource;
 class OpenCVDataSource;
 
-
 class PlaneCalibHandler : public PlaneCalibSystem
 {
 public:

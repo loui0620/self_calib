@@ -1,0 +1,9 @@
+Image Size: [1280 x 720]
+Closed-form Fx=1562.65
+
+Refined:
+ F  = 1235.64
+1245.98
+ PP  = 696.22
+331.60
+ Distortion = [-0.000]

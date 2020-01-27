@@ -41,7 +41,6 @@ namespace planecalib
 	DECLARE_int32(ExpanderMinNewTriangulationsForKeyFrame);
 	DECLARE_double(ExpanderNewCoverageRatioForKeyFrame);
 
-
 	DECLARE_int32(PoseMinRansacIterations);
 	DECLARE_int32(PoseMaxRansacIterations);
 	DECLARE_int32(PoseMinTrackLength);
@@ -49,6 +48,16 @@ namespace planecalib
 
 	DECLARE_bool(DisableBA);
 	DECLARE_int32(GlobalBAFrameCount);
+
+	DECLARE_int32(CameraId);
+	DECLARE_string(VideoFile);
+	DECLARE_string(ImageSequenceFormat);
+	DECLARE_int32(ImageSequenceStartIdx);
+	DECLARE_int32(DropFrames);
+	DECLARE_int32(InputMaxImageWidth);
+	DECLARE_bool(SingleThreaded);
+	DECLARE_string(RecordPath);
+	DECLARE_string(RecordVideoFile);
 }
 
 #endif 
