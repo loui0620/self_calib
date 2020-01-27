@@ -24,13 +24,9 @@
 #include "planecalib/HomographyCalibration.h"
 #include "planecalib/UserInterfaceInfo.h"
 
-
 namespace planecalib
 {
-// Pre-decalred for compiler
-class PlaneCalibSystem;
-class ImageDataSource;
-class OpenCVDataSource;
+
 
 ///////////////////////////////////////////////////////
 DEFINE_int32(PyramidMaxTopLevelWidth, 1280, "Maximum width of the highest pyramid level for a frame.");
@@ -56,54 +52,6 @@ DEFINE_string(RecordVideoFile, "video.avi", "Output video file for recording.");
 //DEFINE_int32(WindowHeight, 960, "Initial height of the window.");
 DEFINE_int32(WindowWidth, 1280, "Initial width of the window.");
 DEFINE_int32(WindowHeight, 720, "Initial height of the window.");
-
-
-class PlaneCalibHandler : public PlaneCalibSystem
-{
-public:
-
-    bool init();
-    bool initImageSrc();
-    bool getFinished() {return mQuit;}
-
-    void RecordInputFrame(cv::Mat3b &im);
-    void Update(void);
-	void DoHomographyBA();
-	void DoFullBA();
-    void exit();
-
-	int getSystemKeyframeSize() const { return mSystem->getKeyframeSize(); }
-
-	bool mIsCalibrated;
-
-private:
-    bool mInitialized = false;
-    int mFrameCount = 0;
-    
-    int mDownsampleInputCount;
-    bool mUsingCamera = false;
-    volatile bool mQuit = false;
-
-    std::unique_ptr<PlaneCalibSystem> mSystem;
-    std::unique_ptr<ImageDataSource> mImageSrc;
-
-    bool mRecordVideo = false;
-    bool mFrameByFrame = false;
-    bool mAdvanceFrame = true;
-    bool mRecordOneFrame = true;
-
-    float mFPS;
-	std::chrono::high_resolution_clock::time_point mLastFPSCheck;
-	std::chrono::high_resolution_clock::duration mFPSUpdateDuration;
-	std::chrono::high_resolution_clock::duration mFPSSampleAccum;
-	int mFPSSampleCount;
-
-    bool mShowProfiler = true;
-    bool mShowProfilerTotals = false;
-
-    int mRecordId;
-    std::string mRecordFileFormat;
-};
 
 bool PlaneCalibHandler::init() 
 {
