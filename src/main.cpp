@@ -1,5 +1,7 @@
 #include <memory>
 #include <iostream>
+#include <chrono>
+#include <opencv2/opencv.hpp> // For runtime clock
 
 #undef GFLAGS_DLL_DEFINE_FLAG
 #define GFLAGS_DLL_DEFINE_FLAG
@@ -19,8 +21,6 @@ DEFINE_int32(PyramidMaxTopLevelWidth, 1280, "Maximum width of the highest pyrami
 DEFINE_int32(SBIMaxWidth, 60, "Maximum width for the Small Blurry Image, input will be downsampled until width is less than this.");
 DEFINE_int32(FeatureDetectorThreshold, 10, "Threshold for the keypoint detector");
 DEFINE_int32(MatcherPixelSearchDistance, 8, "The search distance for matching features (distance from point projection or from epiplar line). Units in pixels of the highest pyramid level.");
-
-
 DEFINE_int32(CameraId, 0, "Id of the camera to open (OpenCV).");
 
 DEFINE_string(VideoFile, "/home/lycheng/Desktop/iphone.avi", "Name of the video file to use (e.g. rotation3.mp4). If both VideoFile and SequenceFormat are empty, the camera is used.");
@@ -47,6 +47,8 @@ int main() {
     if (!mainHandler->init())
         printf("Calib Handler init failed.\n");
 
+	double t1 = cv::getTickCount();
+    
     int runCount = 0;
     while (!mainHandler->mIsCalibrated) 
 	{
@@ -58,7 +60,7 @@ int main() {
 			printf("Perform Homography Bundle Adjustment.\n");
 		}
 
-		if (kayFrameCount >= 10) {
+		if (kayFrameCount >= 40) {
 			mainHandler->DoHomographyBA();
 			mainHandler->DoFullBA();
 			mainHandler->mIsCalibrated = true;
@@ -67,6 +69,9 @@ int main() {
 		}
         runCount++;
     }
-	
+	double t2 = cv::getTickCount();
+	double t = (t2 - t1) / cv::getTickFrequency();
+	printf("Time taken: %.2f sec.\n\n",t);
+
     return 0;
 }
