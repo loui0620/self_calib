@@ -13,7 +13,7 @@
 #include "UserInterfaceInfo.h"
 
 #include "flags.h"
-#include <gflags/gflags.h>
+//#include <gflags/gflags.h>
 
 namespace planecalib
 {

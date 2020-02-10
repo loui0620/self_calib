@@ -4,7 +4,8 @@
 
 #include <memory>
 #include <opencv2/core.hpp>
-#include <gflags/gflags.h>
+//#include <gflags/gflags.h>
+#include "flags.h"
 #include "CameraDistortionModel.h"
 #include "log.h"
 

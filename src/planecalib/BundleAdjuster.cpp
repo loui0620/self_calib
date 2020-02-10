@@ -6,7 +6,8 @@
  */
 
 #include "BundleAdjuster.h"
-#include "gflags/gflags.h"
+//#include "gflags/gflags.h"
+#include "flags.h"
 
 #include <opencv2/calib3d.hpp>
 #include <ceres/ceres.h>

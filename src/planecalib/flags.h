@@ -12,52 +12,71 @@
 #ifndef dtslam_FLAGS_H_
 #define dtslam_FLAGS_H_
 
-#undef GFLAGS_DLL_DECLARE_FLAG
-#define GFLAGS_DLL_DECLARE_FLAG
-#include <gflags/gflags.h>
+#include <stdint.h>
+#include <string>
 
 namespace planecalib
 {
-	DECLARE_int32(PyramidMaxTopLevelWidth);
-	DECLARE_int32(SBIMaxWidth);
-	DECLARE_int32(FeatureDetectorThreshold);
-	DECLARE_int32(FrameKeypointGridSize);
+	const static int32_t FLAGS_PyramidMaxTopLevelWidth = 640;
+	const static int32_t FLAGS_SBIMaxWidth = 60;
+	const static int32_t FLAGS_FeatureDetectorThreshold = 10;
+	const static int32_t FLAGS_MatcherPixelSearchDistance = 8;
+	const static int32_t FLAGS_CameraId = 0;
 
-	DECLARE_int32(TrackerMaxFeatures);
-	DECLARE_int32(TrackerMaxFeaturesPerOctave);
-	DECLARE_int32(TrackerMinMatchCount);
+	const static std::string FLAGS_VideoFile = "/home/louis/Desktop/Video.mp4";
+	const static std::string FLAGS_ImageSequenceFormat = "";
+	const static int32_t FLAGS_ImageSequenceStartIdx = 0;
+	const static int32_t FLAGS_DropFrames = 5;
+	const static int32_t FLAGS_InputMaxImageWidth = 640;
+	const static bool FLAGS_SingleThreaded = true;
+	const static std::string FLAGS_RecordPath = "/home/lycheng/Desktop/record/";
+	const static std::string FLAGS_RecordVideoFile = "video.avi";
 
-	DECLARE_int32(TrackerSelectFeaturesGridSize);
-	DECLARE_int32(MatcherPixelSearchDistance);
-	DECLARE_int32(TrackerOutlierPixelThreshold);
+	const static int32_t FLAGS_WindowWidth = 1280;
+	const static int32_t FLAGS_WindowHeight = 720;
 
-	DECLARE_int32(MatcherNonMaximaPixelSize);
-	DECLARE_int32(MatcherMaxZssdScore);
-	DECLARE_double(MatcherBestScorePercentThreshold);
-	DECLARE_double(WarperMaxCornerDrift);
+	/*
+	DECLARE_int32_flag(PyramidMaxTopLevelWidth);
+	DECLARE_int32_flag(SBIMaxWidth);
+	DECLARE_int32_flag(FeatureDetectorThreshold);
+	DECLARE_int32_flag(FrameKeypointGridSize);              ***
+
+	DECLARE_int32_flag(TrackerMaxFeatures);
+	DECLARE_int32_flag(TrackerMaxFeaturesPerOctave);
+	DECLARE_int32_flag(TrackerMinMatchCount);
+
+	DECLARE_int32_flag(TrackerSelectFeaturesGridSize);
+	DECLARE_int32_flag(MatcherPixelSearchDistance);
+	DECLARE_int32_flag(TrackerOutlierPixelThreshold);
+
+	DECLARE_int32_flag(MatcherNonMaximaPixelSize);
+	DECLARE_int32_flag(MatcherMaxZssdScore);
+	DECLARE_double_flag(MatcherBestScorePercentThreshold);
+	DECLARE_double_flag(WarperMaxCornerDrift);
 
 
-	DECLARE_double(ExpanderMinTriangulationAngle);
-	DECLARE_int32(ExpanderMinNewTriangulationsForKeyFrame);
-	DECLARE_double(ExpanderNewCoverageRatioForKeyFrame);
+	DECLARE_double_flag(ExpanderMinTriangulationAngle);
+	DECLARE_int32_flag(ExpanderMinNewTriangulationsForKeyFrame);
+	DECLARE_double_flag(ExpanderNewCoverageRatioForKeyFrame);
 
-	DECLARE_int32(PoseMinRansacIterations);
-	DECLARE_int32(PoseMaxRansacIterations);
-	DECLARE_int32(PoseMinTrackLength);
-	DECLARE_double(PoseStableRatioThreshold);
+	DECLARE_int32_flag(PoseMinRansacIterations);
+	DECLARE_int32_flag(PoseMaxRansacIterations);
+	DECLARE_int32_flag(PoseMinTrackLength);
+	DECLARE_double_flag(PoseStableRatioThreshold);
 
-	DECLARE_bool(DisableBA);
-	DECLARE_int32(GlobalBAFrameCount);
+	DECLARE_bool_flag(DisableBA);
+	DECLARE_int32_flag(GlobalBAFrameCount);
 
-	DECLARE_int32(CameraId);
-	DECLARE_string(VideoFile);
-	DECLARE_string(ImageSequenceFormat);
-	DECLARE_int32(ImageSequenceStartIdx);
-	DECLARE_int32(DropFrames);
-	DECLARE_int32(InputMaxImageWidth);
-	DECLARE_bool(SingleThreaded);
-	DECLARE_string(RecordPath);
-	DECLARE_string(RecordVideoFile);
+	DECLARE_int32_flag(CameraId);
+	DECLARE_string_flag(VideoFile);
+	DECLARE_string_flag(ImageSequenceFormat);
+	DECLARE_int32_flag(ImageSequenceStartIdx);
+	DECLARE_int32_flag(DropFrames);
+	DECLARE_int32_flag(InputMaxImageWidth);
+	DECLARE_bool_flag(SingleThreaded);
+	DECLARE_string_flag(RecordPath);
+	DECLARE_string_flag(RecordVideoFile);
+	*/
 }
 
 #endif 

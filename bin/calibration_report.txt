@@ -1,13 +1,13 @@
 Calibrated BA report:
 
-Solver Summary (v 2.0.0-eigen-(3.3.4)-lapack-suitesparse-(5.4.0)-cxsparse-(3.1.9)-eigensparse-no_openmp)
+Solver Summary (v 2.0.0-eigen-(3.3.4)-lapack-suitesparse-(4.4.6)-cxsparse-(3.1.4)-eigensparse-no_openmp)
 
                                      Original                  Reduced
-Parameter blocks                         1068                     1068
-Parameters                               2155                     2155
-Effective parameters                     2154                     2154
-Residual blocks                          6494                     6494
-Residuals                               12988                    12988
+Parameter blocks                          886                      886
+Parameters                               1811                     1811
+Effective parameters                     1810                     1810
+Residual blocks                          9504                     9504
+Residuals                               19008                    19008
 
 Minimizer                        TRUST_REGION
 
@@ -17,34 +17,34 @@ Trust region strategy     LEVENBERG_MARQUARDT
                                         Given                     Used
 Linear solver                    SPARSE_SCHUR             SPARSE_SCHUR
 Threads                                     4                        4
-Linear solver ordering                1045,23                  1045,23
+Linear solver ordering                 843,43                   843,43
 Schur structure                         2,2,d                    2,2,d
 
 Cost:
-Initial                          8.724071e+04
-Final                            1.542792e+03
-Change                           8.569791e+04
+Initial                          6.583881e+04
+Final                            2.124566e+03
+Change                           6.371424e+04
 
-Minimizer iterations                       29
-Successful steps                           26
-Unsuccessful steps                          3
+Minimizer iterations                       12
+Successful steps                           11
+Unsuccessful steps                          1
 
 Time (in seconds):
-Preprocessor                         0.004663
+Preprocessor                         0.006142
 
-  Residual only evaluation           0.155142 (29)
-  Jacobian & residual evaluation     4.189090 (26)
-  Linear solver                      0.191062 (29)
-Minimizer                            4.562750
+  Residual only evaluation           0.130308 (12)
+  Jacobian & residual evaluation     3.944578 (11)
+  Linear solver                      0.202546 (12)
+Minimizer                            4.304743
 
-Postprocessor                        0.000157
-Total                                4.567570
+Postprocessor                        0.000439
+Total                                4.311324
 
-Termination:                      CONVERGENCE (Function tolerance reached. |cost_change|/cost: 2.826362e-07 <= 1.000000e-06)
+Termination:                      CONVERGENCE (Function tolerance reached. |cost_change|/cost: 3.501851e-07 <= 1.000000e-06)
 PP fixed: 0
 Distortion fixed: 0
 Focal fixed: 0
 3D Points fixed: 0
-Calibrated BA PP:  696.22 331.598
-Calibrated BA distortion: -4.2923e-08
-Calibrated BA focal: 1235.64 1245.98
+Calibrated BA PP: 319.988 176.675
+Calibrated BA distortion: -3.63607e-08
+Calibrated BA focal: 629.629 629.552

@@ -8,7 +8,8 @@
 #ifndef KEYFRAME_H_
 #define KEYFRAME_H_
 
-#include <gflags/gflags.h>
+//#include <gflags/gflags.h>
+#include "flags.h"
 #include <Eigen/Dense>
 #include <unordered_map>
 #include "eutils.h"
